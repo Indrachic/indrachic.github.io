@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="INDRA CHIC — moda femenina boho chic. Talles 36 al 60. Envíos a todo Argentina.">
+<title>INDRA CHIC — Moda femenina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#10100f; --cream:#f7f3ed; --sand:#e8ddd0; --gold:#c8a04a;
+  --brown:#5b4535; --white:#fff; --muted:#746a61;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--black);font-family:Montserrat,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.container{width:min(1180px,92%);margin:auto}
+.topbar{background:var(--black);color:#fff;text-align:center;padding:9px 12px;font-size:11px;letter-spacing:2px;text-transform:uppercase}
+header{position:sticky;top:0;z-index:20;background:rgba(247,243,237,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(16,16,15,.08)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{height:62px;width:auto;display:block}
+.navlinks{display:flex;gap:28px;align-items:center;font-size:12px;text-transform:uppercase;letter-spacing:1.6px}
+.navlinks a{padding:8px 0;border-bottom:1px solid transparent}.navlinks a:hover{border-color:var(--gold)}
+.menu{display:none;background:none;border:0;font-size:25px}
+.hero{min-height:calc(100vh - 116px);display:grid;grid-template-columns:1.02fr .98fr;background:var(--cream)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:8vw 6vw 8vw max(4vw,calc((100vw - 1180px)/2))}
+.kicker{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:15px}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:500;margin:0}
+h1{font-size:clamp(58px,8vw,112px);line-height:.82;letter-spacing:-2px}
+.hero-copy h1 span{display:block;font-size:.56em;letter-spacing:6px;margin-top:22px;color:var(--brown)}
+.lead{max-width:510px;color:var(--muted);line-height:1.8;margin:30px 0;font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 27px;background:var(--black);color:#fff;text-transform:uppercase;letter-spacing:1.5px;font-size:11px;transition:.25s}
+.btn:hover{background:var(--gold)}
+.btn.gold{background:var(--gold);color:#17130d}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-image{min-height:650px;background:#d2c2b1;position:relative;overflow:hidden}
+.hero-image img{width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-badge{position:absolute;left:24px;bottom:24px;width:120px;height:120px;border:1px solid rgba(255,255,255,.65);border-radius:50%;display:grid;place-items:center;color:#fff;text-align:center;font-family:"Cormorant Garamond";font-size:17px;line-height:1.05;backdrop-filter:blur(4px)}
+.section{padding:95px 0}.section-head{text-align:center;margin-bottom:45px}
+.eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+h2{font-size:54px}.section-head p{max-width:600px;margin:12px auto 0;color:var(--muted);font-size:13px;line-height:1.8}
+.collections{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.collection{position:relative;min-height:420px;overflow:hidden;background:#d6c6b6}
+.collection img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.collection:hover img{transform:scale(1.035)}
+.collection:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.62))}
+.collection .label{position:absolute;z-index:2;left:24px;bottom:22px;color:#fff}
+.collection .label h3{font-size:32px}.collection .label span{font-size:10px;letter-spacing:2px;text-transform:uppercase}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;position:relative}.card-img{aspect-ratio:4/5;overflow:hidden;background:#eee}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:.5s}.card:hover img{transform:scale(1.025)}
+.card-body{padding:18px 18px 21px}.tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.card h3{font-size:27px;margin:5px 0}.card p{margin:0;color:var(--muted);font-size:11px;line-height:1.7}
+.card .cta{display:block;margin-top:15px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase}
+.about{background:var(--black);color:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px}
+.about-logo{max-width:320px;width:70%;margin-bottom:25px}.about h2{color:#fff}.about p{color:#cfc6bd;line-height:1.9;font-size:13px}.features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.feature{border:1px solid rgba(255,255,255,.13);padding:20px}.feature b{display:block;color:var(--gold);font-family:"Cormorant Garamond";font-size:25px;font-weight:500}.feature span{font-size:10px;letter-spacing:1px;color:#cfc6bd}
+.quote{text-align:center;padding:105px 0;background:#eee6dc}.quote blockquote{max-width:760px;margin:0 auto;font-family:"Cormorant Garamond";font-size:42px;line-height:1.15}.quote small{display:block;margin-top:18px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;font-size:9px}
+.social{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.social a{background:#fff;padding:28px;text-align:center;border:1px solid #e5ddd4}.social strong{display:block;font-family:"Cormorant Garamond";font-size:28px;font-weight:500}.social span{font-size:10px;letter-spacing:1.5px;color:var(--muted)}
+footer{background:#0b0b0a;color:#fff;padding:50px 0 25px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}.footer-logo{width:170px;margin-bottom:15px}.footer p{color:#aaa39c;font-size:11px;line-height:1.8}.footer h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 14px}.footer a{display:block;color:#cfc8c0;font-size:11px;margin:9px 0}.copy{border-top:1px solid #262523;margin-top:35px;padding-top:20px;color:#777;font-size:9px;letter-spacing:1px;text-transform:uppercase}
+.whatsapp{position:fixed;right:18px;bottom:18px;z-index:30;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#1fbe68;color:#fff;box-shadow:0 8px 25px rgba(0,0,0,.22);font-size:25px}
+@media(max-width:820px){
+ .nav{height:72px}.logo{height:54px}.menu{display:block}.navlinks{display:none}
+ .hero{grid-template-columns:1fr}.hero-copy{padding:70px 6%}.hero-image{min-height:560px}
+ .collections,.products{grid-template-columns:1fr 1fr}.collection{min-height:350px}
+ .about-grid{grid-template-columns:1fr;gap:25px}.social{grid-template-columns:1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:520px){
+ h2{font-size:44px}.collections,.products{grid-template-columns:1fr}.hero-image{min-height:520px}
+ .hero-copy h1{font-size:64px}.features{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="topbar">Envíos a todo Argentina · Talles 36 al 60 · Atención personalizada</div>
+<header>
+  <div class="container nav">
+    <a href="#inicio"><img class="logo" src="assets/logo-black.png" alt="INDRA CHIC"></a>
+    <nav class="navlinks">
+      <a href="#inicio">Inicio</a><a href="#coleccion">Colección</a><a href="#destacados">Destacados</a><a href="#nosotros">Nosotras</a><a href="#contacto">Contacto</a>
+    </nav>
+    <button class="menu" aria-label="Menú">☰</button>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="kicker">INDRA CHIC · Otoño / Invierno 2026</div>
+    <h1>Vestí tu<br><span>propia historia.</span></h1>
+    <p class="lead">Moda femenina con espíritu boho chic, texturas cálidas y piezas pensadas para combinar con tu personalidad. Descubrí la colección de INDRA CHIC.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#destacados">Descubrir colección</a>
+      <a class="btn gold" href="https://wa.me/542604368811?text=Hola%20INDRA%20CHIC%2C%20quiero%20consultar%20por%20una%20prenda." target="_blank">Comprar por WhatsApp</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="assets/look-cuero-boho.png" alt="Look boho chic INDRA CHIC">
+    <div class="hero-badge">INDRA<br>CHIC<br>✦</div>
+  </div>
+</section>
+
+<section class="section" id="coleccion">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Explorá</div><h2>La colección</h2><p>Una selección de prendas para crear looks urbanos, elegantes y bohemios, desde el día hasta la noche.</p></div>
+    <div class="collections">
+      <a class="collection" href="#destacados"><img src="assets/look-cuero-chocolate.png" alt="Cuero chocolate"><div class="label"><span>Texturas</span><h3>Cuero & chocolate</h3></div></a>
+      <a class="collection" href="#destacados"><img src="assets/look-corderoy-chocolate.png" alt="Corderoy chocolate"><div class="label"><span>Esenciales</span><h3>Corderoy</h3></div></a>
+      <a class="collection" href="#destacados"><img src="assets/look-cuero-boho.png" alt="Boho chic"><div class="label"><span>Actitud</span><h3>Boho chic</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="destacados" style="padding-top:25px">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Selección INDRA</div><h2>Destacados</h2><p>Estos espacios quedan preparados para sumar tus productos, precios, colores y talles a medida que los vayas cargando.</p></div>
+    <div class="products">
+      <article class="card">
+        <div class="card-img"><img src="assets/look-cuero-boho.png" alt="Look cuero boho"></div>
+        <div class="card-body"><span class="tag">Look destacado</span><h3>Cuero & Boho</h3><p>Producción editorial · Consultá colores y talles disponibles.</p><a class="cta" href="https://wa.me/542604368811?text=Hola%20INDRA%20CHIC%2C%20quiero%20consultar%20por%20el%20look%20Cuero%20%26%20Boho." target="_blank">Consultar disponibilidad →</a></div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="assets/look-cuero-chocolate.png" alt="Conjunto cuero chocolate"></div>
+        <div class="card-body"><span class="tag">Look destacado</span><h3>Chocolate</h3><p>Una combinación sofisticada para elevar tus looks.</p><a class="cta" href="https://wa.me/542604368811?text=Hola%20INDRA%20CHIC%2C%20quiero%20consultar%20por%20el%20look%20Chocolate." target="_blank">Consultar disponibilidad →</a></div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="assets/look-corderoy-chocolate.png" alt="Conjunto corderoy chocolate"></div>
+        <div class="card-body"><span class="tag">Look destacado</span><h3>Corderoy Chocolate</h3><p>Textura, calidez y silueta amplia con identidad INDRA.</p><a class="cta" href="https://wa.me/542604368811?text=Hola%20INDRA%20CHIC%2C%20quiero%20consultar%20por%20el%20look%20Corderoy%20Chocolate." target="_blank">Consultar disponibilidad →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="nosotros">
+  <div class="container about-grid">
+    <div>
+      <img class="about-logo" src="assets/logo-white.png" alt="INDRA CHIC">
+      <div class="eyebrow">Nuestra esencia</div><h2>Moda para sentirte vos.</h2>
+    </div>
+    <div>
+      <p>En INDRA CHIC creemos que vestirse también es una forma de expresión. Seleccionamos prendas femeninas que combinan comodidad, tendencia y personalidad, con una estética boho chic que se adapta a la vida real.</p>
+      <p>Queremos acompañarte a encontrar ese look que te hace sentir segura, auténtica y cómoda con quien sos.</p>
+      <div class="features">
+        <div class="feature"><b>36 — 60</b><span>Rango de talles</span></div>
+        <div class="feature"><b>Argentina</b><span>Envíos a todo el país</span></div>
+        <div class="feature"><b>WhatsApp</b><span>Atención personalizada</span></div>
+        <div class="feature"><b>INDRA</b><span>Boho chic con identidad</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote"><div class="container"><blockquote>“La elegancia está en los detalles, pero el estilo está en vos.”</blockquote><small>INDRA CHIC</small></div></section>
+
+<section class="section" id="contacto">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">Seguinos</div><h2>INDRA CHIC en redes</h2><p>Descubrí novedades, nuevas prendas, combinaciones y contenido de la marca.</p></div>
+    <div class="social">
+      <a href="https://instagram.com/indraten25" target="_blank"><strong>Instagram</strong><span>@indraten25</span></a>
+      <a href="https://tiktok.com/@indraimpo92" target="_blank"><strong>TikTok</strong><span>@indraimpo92</span></a>
+      <a href="https://www.facebook.com/IndraImportado" target="_blank"><strong>Facebook</strong><span>Indra Importado</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="footer-grid">
+   <div><img class="footer-logo" src="assets/logo-white.png" alt="INDRA CHIC"><p>Moda femenina · Boho Chic<br>Envíos a todo Argentina · Talles 36 al 60</p></div>
+   <div><h4>Contacto</h4><a href="https://wa.me/542604368811" target="_blank">WhatsApp · 2604 368811</a><a href="https://instagram.com/indraten25" target="_blank">Instagram</a><a href="https://tiktok.com/@indraimpo92" target="_blank">TikTok</a></div>
+   <div><h4>Información</h4><a href="#coleccion">Colección</a><a href="#nosotros">Sobre INDRA</a><a href="#contacto">Redes sociales</a></div>
+  </div>
+  <div class="copy">© 2026 INDRA CHIC · Todos los derechos reservados</div>
+ </div>
+</footer>
+<a class="whatsapp" href="https://wa.me/542604368811?text=Hola%20INDRA%20CHIC%2C%20quiero%20ver%20la%20colecci%C3%B3n." target="_blank" aria-label="WhatsApp">⌕</a>
+</body>
+</html>
